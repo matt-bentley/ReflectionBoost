@@ -14,8 +14,8 @@ namespace ReflectionBoost
             Console.WriteLine("Starting...");
 
             Dictionary<string, object> properties = new Dictionary<string, object>();
-            properties.Add("Id", "d");
-            properties.Add("Name", "My Object");
+            properties.Add("Id", 3);
+            properties.Add("Name", "3");
             properties.Add("CreatedDate", DateTime.Now);
 
             Stopwatch sw = new Stopwatch();

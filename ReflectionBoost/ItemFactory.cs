@@ -69,6 +69,25 @@ namespace ReflectionBoost
                         }
                     };
                 }
+                else if (property.PropertyType == typeof(string))
+                {
+                    setter = (item, value) =>
+                    {
+                        if (value == null)
+                        {
+                            property.SetValue(item, null, null);
+                            return;
+                        }
+                        else if (value.GetType() == property.PropertyType)
+                        {
+                            property.SetValue(item, value);
+                        }
+                        else
+                        {
+                            property.SetValue(item, value.ToString());
+                        }                       
+                    };
+                }
                 else
                 {
                     setter = (item, value) =>
