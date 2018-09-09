@@ -14,7 +14,7 @@ namespace ReflectionBoost
             Console.WriteLine("Starting...");
 
             Dictionary<string, object> properties = new Dictionary<string, object>();
-            properties.Add("Id", 1);
+            properties.Add("Id", "d");
             properties.Add("Name", "My Object");
             properties.Add("CreatedDate", DateTime.Now);
 
